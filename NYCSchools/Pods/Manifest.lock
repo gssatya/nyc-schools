@@ -1,0 +1,16 @@
+PODS:
+  - app-common (0.0.1)
+
+DEPENDENCIES:
+  - app-common (from `../app-common`)
+
+EXTERNAL SOURCES:
+  app-common:
+    :path: "../app-common"
+
+SPEC CHECKSUMS:
+  app-common: 1e62e37eda00cf3021cbb9c8f86586eab8b2206f
+
+PODFILE CHECKSUM: 847b747808643fbcecef467c16d7a9153dfa4ea0
+
+COCOAPODS: 1.11.2

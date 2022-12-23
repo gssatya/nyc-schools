@@ -14,6 +14,7 @@
 		52C831DC29562C53003AF7BD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C831DB29562C53003AF7BD /* AppRouter.swift */; };
 		52C831DE29562C85003AF7BD /* NavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C831DD29562C85003AF7BD /* NavigationBarProtocol.swift */; };
 		52C831E029562CAF003AF7BD /* NavigationBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C831DF29562CAF003AF7BD /* NavigationBarItem.swift */; };
+		52C83269295632A9003AF7BD /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C83268295632A9003AF7BD /* FileStorageManager.swift */; };
 		52EE4B9C29557126002F0F21 /* app_common.docc in Sources */ = {isa = PBXBuildFile; fileRef = 52EE4B9B29557126002F0F21 /* app_common.docc */; };
 		52EE4BA229557126002F0F21 /* app_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EE4B9729557126002F0F21 /* app_common.framework */; };
 		52EE4BA729557126002F0F21 /* app_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE4BA629557126002F0F21 /* app_commonTests.swift */; };
@@ -38,6 +39,7 @@
 		52C831DB29562C53003AF7BD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		52C831DD29562C85003AF7BD /* NavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarProtocol.swift; sourceTree = "<group>"; };
 		52C831DF29562CAF003AF7BD /* NavigationBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItem.swift; sourceTree = "<group>"; };
+		52C83268295632A9003AF7BD /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		52EE4B9729557126002F0F21 /* app_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = app_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EE4B9A29557126002F0F21 /* app_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = app_common.h; sourceTree = "<group>"; };
 		52EE4B9B29557126002F0F21 /* app_common.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = app_common.docc; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = AppNavigation;
 			sourceTree = "<group>";
 		};
+		52C8326729563289003AF7BD /* FileStorage */ = {
+			isa = PBXGroup;
+			children = (
+				52C83268295632A9003AF7BD /* FileStorageManager.swift */,
+			);
+			path = FileStorage;
+			sourceTree = "<group>";
+		};
 		52EE4B8D29557126002F0F21 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		52EE4B9929557126002F0F21 /* app-common */ = {
 			isa = PBXGroup;
 			children = (
+				52C8326729563289003AF7BD /* FileStorage */,
 				52C831DA29562C19003AF7BD /* AppNavigation */,
 				52C831D529562B81003AF7BD /* Extensions */,
 				52C831D029562AC7003AF7BD /* NetworkManager */,
@@ -242,6 +253,7 @@
 				52C831D729562BA2003AF7BD /* UIViewController+Extension.swift in Sources */,
 				52C831D429562B48003AF7BD /* NetworkManager.swift in Sources */,
 				52C831DE29562C85003AF7BD /* NavigationBarProtocol.swift in Sources */,
+				52C83269295632A9003AF7BD /* FileStorageManager.swift in Sources */,
 				52C831DC29562C53003AF7BD /* AppRouter.swift in Sources */,
 				52C831D229562B18003AF7BD /* ApiRequestProtocol.swift in Sources */,
 				52C831D929562BDC003AF7BD /* UIDevice+Extension.swift in Sources */,

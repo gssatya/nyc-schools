@@ -1,0 +1,6 @@
+framework module app_common {
+  umbrella header "app-common-umbrella.h"
+
+  export *
+  module * { export * }
+}

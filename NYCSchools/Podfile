@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+def pods
+  pod 'app-common', :path => '../app-common'
+end 
+
+target 'NYCSchools' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for NYCSchools
+  pods
+  
+  target 'NYCSchoolsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NYCSchoolsUITests' do
+    # Pods for testing
+  end
+
+end

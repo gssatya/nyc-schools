@@ -1,0 +1,21 @@
+{
+  "name": "app-common",
+  "version": "0.0.1",
+  "summary": "A reusable framework with commonly used classes, utitlities etc.",
+  "description": "This framework contains some of the commonly used utilities, classes, protocols etc. that is required to develop a basic iOS app.",
+  "homepage": "https://www.jpmorganchase.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Satya Surya": "sathya.sastha@gmail.com"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "app-common/**/*.swift"
+}
