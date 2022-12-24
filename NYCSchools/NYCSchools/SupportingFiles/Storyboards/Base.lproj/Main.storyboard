@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search by school name" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-4F-KfL">
+                                <rect key="frame" x="0.0" y="91" width="334" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="u8d-dW-mQM"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-2l-8zI">
                                 <rect key="frame" x="0.0" y="147" width="390" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,43 +69,48 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4Oo-Pj-zsk"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-4F-KfL">
-                                <rect key="frame" x="0.0" y="91" width="390" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-KD-uii">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                                <color key="tintColor" red="0.047058823530000002" green="0.12549019610000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuj-AK-fc5">
+                                <rect key="frame" x="334" y="91" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="MDr-0W-fKC"/>
+                                    <constraint firstAttribute="width" constant="56" id="ipD-ED-rSU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sort"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="u8d-dW-mQM"/>
+                                    <action selector="sort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vrs-3I-bOX"/>
                                 </connections>
-                            </searchBar>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cFe-4F-KfL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ADx-Gd-qtY"/>
+                            <constraint firstItem="wuj-AK-fc5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="I7B-LE-R2x"/>
                             <constraint firstItem="cFe-4F-KfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MEo-5h-RTF"/>
+                            <constraint firstItem="5fW-KD-uii" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NJ0-VF-yhb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3mT-2l-8zI" secondAttribute="trailing" id="PFr-Qg-kxL"/>
+                            <constraint firstItem="5fW-KD-uii" firstAttribute="centerX" secondItem="3mT-2l-8zI" secondAttribute="centerX" id="QKd-W8-1ZK"/>
                             <constraint firstItem="3mT-2l-8zI" firstAttribute="top" secondItem="cFe-4F-KfL" secondAttribute="bottom" id="Uah-xt-f4o"/>
+                            <constraint firstItem="wuj-AK-fc5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="awb-86-voI"/>
                             <constraint firstItem="3mT-2l-8zI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eEB-is-kC4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3mT-2l-8zI" secondAttribute="bottom" id="nEr-f8-iGP"/>
-                            <constraint firstItem="cFe-4F-KfL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ydL-9R-OvM"/>
+                            <constraint firstItem="wuj-AK-fc5" firstAttribute="leading" secondItem="cFe-4F-KfL" secondAttribute="trailing" id="xkp-px-4xT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kAM-hC-jHg"/>
                     <connections>
+                        <outlet property="activityLoader" destination="5fW-KD-uii" id="5Nz-kL-2rB"/>
                         <outlet property="searchBar" destination="cFe-4F-KfL" id="fPN-dK-qcK"/>
-                        <outlet property="searchDisplayController" destination="wFg-J6-fov" id="wYW-JH-8zc"/>
+                        <outlet property="sortButton" destination="wuj-AK-fc5" id="crS-le-9k7"/>
                         <outlet property="tableView" destination="3mT-2l-8zI" id="f44-FW-Ek6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="wFg-J6-fov">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="wGr-WK-QlM"/>
-                        <outlet property="searchBar" destination="cFe-4F-KfL" id="5uN-Yw-ls5"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="9py-ge-Yio"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="laN-Cb-RYf"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="PXb-sG-1Gg"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1063.0769230769231" y="-2.1327014218009479"/>
         </scene>

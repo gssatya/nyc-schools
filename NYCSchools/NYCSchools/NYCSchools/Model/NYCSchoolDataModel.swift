@@ -15,6 +15,8 @@ struct NYCSchoolDataModel: Codable {
     var phoneNumber: String?
     var schoolEmail: String?
     var website: String?
+    var strength: String?
+    var safetyScore: String?
     
     private enum CodingKeys: String, CodingKey {
         case dbn
@@ -24,6 +26,8 @@ struct NYCSchoolDataModel: Codable {
         case phoneNumber = "phone_number"
         case schoolEmail = "school_email"
         case website
+        case strength = "total_students"
+        case safetyScore = "pct_stu_safe"
     }
     
     public init(from decoder: Decoder) throws {
@@ -35,6 +39,8 @@ struct NYCSchoolDataModel: Codable {
         phoneNumber = try container.decodeIfPresent(String.self, forKey: .phoneNumber)
         schoolEmail = try container.decodeIfPresent(String.self, forKey: .schoolEmail)
         website = try container.decodeIfPresent(String.self, forKey: .website)
+        strength = try container.decodeIfPresent(String.self, forKey: .strength)
+        safetyScore = try container.decodeIfPresent(String.self, forKey: .safetyScore)
     }
 }
 

@@ -79,16 +79,6 @@ public extension UIViewController {
 
         present(alert, animated: true, completion: nil)
     }
-    
-//    /// Extension method to display loader
-//    func showLoader() {
-//        ActivityLoader.show()
-//    }
-//
-//    /// Extension method to remove loader
-//    func hideLoader() {
-//        ActivityLoader.hide()
-//    }
 }
 
 extension NSObject {
