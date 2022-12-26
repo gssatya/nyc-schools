@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-/// Table view cell class for the planets VC
+/// Table view cell class for the Schools list
 class SchoolsListTableViewCell: UITableViewCell {
     static let identifier: String = "SchoolsListTableViewCell"
     @IBOutlet weak var titleLabel: UILabel!

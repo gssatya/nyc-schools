@@ -48,7 +48,7 @@ class SATResultsService: ApiRequestProtocol {
     func responseDecoder(_ response: Data) -> Any? {
         guard let json = try? JSONSerialization.jsonObject(with: response, options: .allowFragments),
               let data = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted),
-              let defaultResponseObject = try? JSONDecoder().decode([NYCSchoolDataModel].self, from: data) else {
+              let defaultResponseObject = try? JSONDecoder().decode([SATResultsDataModel].self, from: data) else {
                   return nil
               }
         return defaultResponseObject

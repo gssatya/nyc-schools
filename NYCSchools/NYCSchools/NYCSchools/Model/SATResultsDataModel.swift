@@ -28,6 +28,7 @@ struct SATResultsDataModel: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         dbn = try container.decodeIfPresent(String.self, forKey: .dbn)
         schoolName = try container.decodeIfPresent(String.self, forKey: .schoolName)
+        testTakers = try container.decodeIfPresent(String.self, forKey: .testTakers)
         readingAvg = try container.decodeIfPresent(String.self, forKey: .readingAvg)
         mathAvg = try container.decodeIfPresent(String.self, forKey: .mathAvg)
         writingAvg = try container.decodeIfPresent(String.self, forKey: .writingAvg)

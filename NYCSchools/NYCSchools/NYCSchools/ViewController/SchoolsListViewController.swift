@@ -87,6 +87,9 @@ extension SchoolsListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let item = viewModel.tableData[indexPath.row]
+        let payload: [String: Any] = ["SelectedSchool": item]
+        AppRouter.shared.navigateTo(identifier: "SchoolDetailsViewController", payload: payload)
     }
 }
 
