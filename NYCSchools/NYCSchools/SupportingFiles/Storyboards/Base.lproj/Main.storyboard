@@ -261,9 +261,8 @@
                                     <outlet property="delegate" destination="Q4D-Sl-11V" id="ZYn-ND-wKk"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="eF6-ok-CjX">
-                                <rect key="frame" x="185" y="412" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="eF6-ok-CjX">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.047058823530000002" green="0.12549019610000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -271,9 +270,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="igt-gL-LV0" firstAttribute="trailing" secondItem="8vp-PW-1X3" secondAttribute="trailing" id="97T-ik-TYM"/>
+                            <constraint firstItem="eF6-ok-CjX" firstAttribute="centerY" secondItem="RwM-0h-AWx" secondAttribute="centerY" id="I4O-AH-6py"/>
                             <constraint firstItem="8vp-PW-1X3" firstAttribute="top" secondItem="igt-gL-LV0" secondAttribute="top" id="UtQ-jQ-CeC"/>
                             <constraint firstItem="igt-gL-LV0" firstAttribute="bottom" secondItem="8vp-PW-1X3" secondAttribute="bottom" id="g9S-aM-WWz"/>
                             <constraint firstItem="8vp-PW-1X3" firstAttribute="leading" secondItem="igt-gL-LV0" secondAttribute="leading" id="hfz-fg-mXq"/>
+                            <constraint firstItem="eF6-ok-CjX" firstAttribute="centerX" secondItem="8vp-PW-1X3" secondAttribute="centerX" id="tcg-R3-Krj"/>
                         </constraints>
                     </view>
                     <connections>
