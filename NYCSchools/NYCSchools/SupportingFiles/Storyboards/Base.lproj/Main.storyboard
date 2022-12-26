@@ -172,23 +172,23 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolDetailsOverviewTableViewCell" id="w2E-Xd-2eF" customClass="SchoolDetailsOverviewTableViewCell" customModule="NYCSchools" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="78" width="390" height="60"/>
+                                        <rect key="frame" x="0.0" y="78" width="390" height="68.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w2E-Xd-2eF" id="K4Y-Ld-hqs">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="68.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9p-ED-YL3">
-                                                    <rect key="frame" x="20" y="10" width="350" height="40"/>
+                                                    <rect key="frame" x="20" y="10.000000000000004" width="350" height="48.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-iP-wN6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="17"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="25.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
                                                             <color key="textColor" red="0.047058823530000002" green="0.12549019610000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSm-hN-U4Y">
-                                                            <rect key="frame" x="0.0" y="27" width="350" height="13"/>
+                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="350" height="13"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -209,7 +209,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolDetailsTableViewCell" id="Xig-og-Il1" customClass="SchoolDetailsTableViewCell" customModule="NYCSchools" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="138" width="390" height="35.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="146.33333587646484" width="390" height="35.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xig-og-Il1" id="hZQ-4m-dr0">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="35.666667938232422"/>

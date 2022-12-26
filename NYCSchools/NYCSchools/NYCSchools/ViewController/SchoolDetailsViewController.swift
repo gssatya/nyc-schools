@@ -23,13 +23,7 @@ class SchoolDetailsViewController: UIViewController, NavigationPayloadProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         getData()
-    }
-    
-    /// Method to set up initial UI
-    private func setupUI() {
-        title = viewModel.getNavBarTitle()
     }
     
     /// Method to fetch data 
@@ -122,10 +116,10 @@ extension SchoolDetailsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var title = ""
         switch section {
-        case 0: title = "OVERVIEW"
+        case 0: return nil
         case 1: title = "SAT SCORES"
         case 2: title = "CONTACT"
-        default: title = ""
+        default: return nil
         }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SchoolDetailsSectionHeaderView.identifier) as? SchoolDetailsSectionHeaderView else {

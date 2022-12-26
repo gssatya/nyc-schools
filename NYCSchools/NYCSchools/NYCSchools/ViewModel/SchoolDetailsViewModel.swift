@@ -22,12 +22,6 @@ class SchoolDetailsViewModel {
         self.selectedSchool = selectedSchool
     }
     
-    /// To provide nav bar title for the VC
-    /// - Returns: String
-    func getNavBarTitle() -> String {
-        return selectedSchool?.schoolName ?? ""
-    }
-    
     /// To fetch the data from the SAT Results API
     /// - Parameter completion: success/failure boolean
     func getSchoolSATResults(completion: @escaping ((Bool) -> Void)) {
@@ -55,8 +49,8 @@ class SchoolDetailsViewModel {
             return
         }
         
-        if let overview = selectedSchool.overviewParagraph {
-            let overviewRow = SchoolDetailsOverview(schoolName: "", overview: overview)
+        if let schoolName = selectedSchool.schoolName, let overview = selectedSchool.overviewParagraph {
+            let overviewRow = SchoolDetailsOverview(schoolName: schoolName, overview: overview)
             tableData[SchoolDetailsTableSection.overview.rawValue] = overviewRow
         }
         
