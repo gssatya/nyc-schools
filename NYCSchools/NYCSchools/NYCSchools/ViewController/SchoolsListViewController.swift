@@ -22,12 +22,14 @@ class SchoolsListViewController: UIViewController {
         getSchoolsData()
     }
     
+    /// Method to set up initial UI
     private func setupUI() {
         addNavigationBar()
         sortButton.layer.borderWidth = 0.2
         sortButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
+    /// Method to fetch data
     private func getSchoolsData() {
         activityLoader.startAnimating()
         viewModel.getData { [weak self] success in
@@ -45,6 +47,8 @@ class SchoolsListViewController: UIViewController {
         }
     }
     
+    /// Sort button action. Show options to sort.
+    /// - Parameter sender: Any
     @IBAction func sort(_ sender: Any) {
         var actions: [UIAlertAction] = []
         for item in SchoolsSortingType.allCases {

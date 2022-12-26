@@ -9,7 +9,7 @@ import Foundation
 import app_common
 
 /// Service class confirming to ApiRequestProtocol
-/// To fetch the Schools List data from server.
+/// To fetch the SAT Results data for a school.
 class SATResultsService: ApiRequestProtocol {
     
     var dbn: String = ""

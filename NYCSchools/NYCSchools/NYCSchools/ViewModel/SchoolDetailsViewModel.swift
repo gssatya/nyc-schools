@@ -13,6 +13,8 @@ class SchoolDetailsViewModel {
     private var satResultsData: SATResultsDataModel?
     var tableData: [String: Any] = [:]
     
+    /// Setup the data initially when screen loads
+    /// - Parameter payload: payload dictionary
     func setupData(with payload: [String: Any]?) {
         guard let selectedSchool = payload?["SelectedSchool"] as? NYCSchoolDataModel else {
             return
@@ -20,10 +22,14 @@ class SchoolDetailsViewModel {
         self.selectedSchool = selectedSchool
     }
     
+    /// To provide nav bar title for the VC
+    /// - Returns: String
     func getNavBarTitle() -> String {
         return selectedSchool?.schoolName ?? ""
     }
     
+    /// To fetch the data from the SAT Results API
+    /// - Parameter completion: success/failure boolean
     func getSchoolSATResults(completion: @escaping ((Bool) -> Void)) {
         guard let schoolId = selectedSchool?.dbn else {
             completion(false)
@@ -43,6 +49,7 @@ class SchoolDetailsViewModel {
         }
     }
     
+    /// Sets up the data for tabular display.
     func setupTableData() {
         guard let selectedSchool = selectedSchool, let satResultsData = satResultsData else {
             return

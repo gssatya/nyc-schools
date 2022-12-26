@@ -7,6 +7,10 @@
 
 import Foundation
 
+///
+/// Response Data model from the API
+/// https://data.cityofnewyork.us/resource/s3k6-pzi2.json
+///
 struct NYCSchoolDataModel: Codable {
     var dbn: String?
     var schoolName: String?

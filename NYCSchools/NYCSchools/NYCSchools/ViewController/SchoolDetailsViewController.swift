@@ -27,10 +27,12 @@ class SchoolDetailsViewController: UIViewController, NavigationPayloadProtocol {
         getData()
     }
     
+    /// Method to set up initial UI
     private func setupUI() {
         title = viewModel.getNavBarTitle()
     }
     
+    /// Method to fetch data 
     private func getData() {
         activityLoader.startAnimating()
         viewModel.getSchoolSATResults { [weak self] success in

@@ -7,6 +7,10 @@
 
 import Foundation
 
+///
+/// Response Data model from the API
+/// https://data.cityofnewyork.us/resource/f9bf-2cp4.json?dbn=<value>
+///
 struct SATResultsDataModel: Codable {
     var dbn: String?
     var schoolName: String?

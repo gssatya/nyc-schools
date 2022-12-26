@@ -7,11 +7,15 @@
 
 import Foundation
 
+// MARK: - Enum for type of sorting
+
 enum SchoolsSortingType: String, CaseIterable {
     case name = "Name"
     case strength = "Strength (low to high)"
     case safety = "Safety Score (low to high)"
 }
+
+// MARK: - View model class
 
 class SchoolsListViewModel {
     
