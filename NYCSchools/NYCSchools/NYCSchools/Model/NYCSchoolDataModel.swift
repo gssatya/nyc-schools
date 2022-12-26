@@ -12,6 +12,7 @@ import Foundation
 /// https://data.cityofnewyork.us/resource/s3k6-pzi2.json
 ///
 struct NYCSchoolDataModel: Codable {
+    
     var dbn: String?
     var schoolName: String?
     var overviewParagraph: String?
@@ -45,6 +46,18 @@ struct NYCSchoolDataModel: Codable {
         website = try container.decodeIfPresent(String.self, forKey: .website)
         strength = try container.decodeIfPresent(String.self, forKey: .strength)
         safetyScore = try container.decodeIfPresent(String.self, forKey: .safetyScore)
+    }
+    
+    internal init(dbn: String? = nil, schoolName: String? = nil, overviewParagraph: String? = nil, location: String? = nil, phoneNumber: String? = nil, schoolEmail: String? = nil, website: String? = nil, strength: String? = nil, safetyScore: String? = nil) {
+        self.dbn = dbn
+        self.schoolName = schoolName
+        self.overviewParagraph = overviewParagraph
+        self.location = location
+        self.phoneNumber = phoneNumber
+        self.schoolEmail = schoolEmail
+        self.website = website
+        self.strength = strength
+        self.safetyScore = safetyScore
     }
 }
 
