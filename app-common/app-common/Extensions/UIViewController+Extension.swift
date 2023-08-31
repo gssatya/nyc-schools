@@ -79,6 +79,19 @@ public extension UIViewController {
 
         present(alert, animated: true, completion: nil)
     }
+    
+    @objc func swizzled_viewDidLoad() {
+        print("Calling the Swizzled method for -- \(self.onlyClassName)")
+        swizzled_viewDidLoad()
+    }
+    
+    static func swizzle() {
+        let origSelector = #selector(UIViewController.viewDidLoad)
+        let swizSelector = #selector(UIViewController.swizzled_viewDidLoad)
+        let origMethod = class_getInstanceMethod(self, origSelector)
+        let swizMethod = class_getInstanceMethod(self, swizSelector)
+        method_exchangeImplementations(origMethod!, swizMethod!)
+    }
 }
 
 extension NSObject {
